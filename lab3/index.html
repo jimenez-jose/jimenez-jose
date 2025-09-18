@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portal oficial de eventos UTP - Universidad Tecnológica de Panamá">
+  <meta name="keywords" content="UTP, eventos, universidad, Panamá, estudiantes">
+  <meta name="author" content="[Tu nombre]">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eventos UTP">
+  <meta property="og:description" content="Descubre los próximos eventos en la UTP">
+  <meta property="og:image" content="assets/evento-foto.jpg">
+
+  <title>Portal de Eventos UTP</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    :root{
+      --accent:#005b96;
+      --muted:#666;
+      --bg:#f6f8fb;
+      --card:#fff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#222}
+    header{background:linear-gradient(90deg,var(--accent),#0a6fb6);color:white;padding:12px 20px;display:flex;align-items:center;gap:20px}
+    header img{height:56px}
+    nav a{color:white;margin:0 8px;text-decoration:none;font-weight:600}
+    main{display:grid;grid-template-columns:1fr 320px;gap:20px;padding:20px;max-width:1200px;margin:0 auto}
+    .content{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .events-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+    article{border:1px solid #e6e9ef;padding:12px;border-radius:8px;background:linear-gradient(#fff,#fbfdff)}
+    article h3{margin:0 0 6px}
+    aside{background:var(--card);padding:12px;border-radius:12px}
+    footer{background:#08314a;color:white;padding:18px;text-align:center;margin-top:20px}
+    .media{display:grid;grid-template-columns:1fr;gap:12px}
+    figure{margin:0}
+    form label{display:block;margin:8px 0 4px}
+    input,select,textarea{width:100%;padding:8px;border:1px solid #cfd8e6;border-radius:6px}
+    .row{display:flex;gap:10px}
+    .row > *{flex:1}
+    small{color:var(--muted)}
+    .meta{font-size:0.9rem;color:var(--muted)}
+    button{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+    button:disabled{opacity:0.6}
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <img src="assets/logo-utp.png" alt="Logo UTP - Universidad Tecnológica de Panamá" onerror="this.style.display='none'">
+    <div>
+      <h1 style="margin:0;font-size:1.25rem">Portal de Eventos UTP</h1>
+      <nav aria-label="Navegación principal">
+        <a href="#multimedia">Multimedia</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#registro">Registro</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="content" role="main">
+      <!-- Sección multimedia -->
+      <section id="multimedia" aria-labelledby="multimedia-title">
+        <h2 id="multimedia-title">Sección Multimedia</h2>
+        <div class="media">
+          <!-- Video institucional de graduación -->
+          <figure>
+            <figcaption>Video institucional - Ceremonia de Graduación</figcaption>
+            <video controls preload="metadata" width="100%" aria-label="Video institucional de la Ceremonia de Graduación UTP">
+              <source src="assets/evento-video.mp4" type="video/mp4">
+              <source src="assets/evento-video.webm" type="video/webm">
+              Tu navegador no soporta la etiqueta <code>video</code>. Puedes descargar el archivo desde <a href="assets/evento-video.mp4">aquí</a>.
+            </video>
+          </figure>
+
+          <!-- Audio de la música Patria -->
+          <figure>
+            <figcaption>Audio institucional - Canción de patria (Rubén Blades)</figcaption>
+            <audio controls preload="none" aria-label="Audio de la canción de patria de Rubén Blades">
+              <source src="assets/patria.m4a" type="audio/mp4">
+              <source src="assets/patria.mp3" type="audio/mpeg">
+              <source src="assets/patria.ogg" type="audio/ogg">
+              Tu navegador no soporta la etiqueta <code>audio</code>.
+            </audio>
+          </figure>
+
+          <!-- Iframe Google Maps -->
+          <figure>
+            <figcaption>Ubicación: Campus UTP (Google Maps)</figcaption>
+            <iframe title="Ubicación del Campus UTP en Google Maps" src="https://www.google.com/maps?q=Universidad+Tecnologica+de+Panama&output=embed" width="100%" height="300" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Sección de eventos agrupados -->
+      <section id="eventos" aria-labelledby="eventos-title">
+        <h2 id="eventos-title">Eventos</h2>
+
+        <section aria-labelledby="acad-title">
+          <h3 id="acad-title">Académicos</h3>
+          <div class="events-grid" role="list">
+            <article role="listitem" aria-labelledby="evt1-title">
+              <h3 id="evt1-title">Feria Tecnológica UTP 2025</h3>
+              <p class="meta">Fecha: 2025-10-15 — Hora: 09:00 — Lugar: Auditorio Principal</p>
+              <p>Exhibición de proyectos estudiantiles, charlas y talleres orientados a tecnologías emergentes.</p>
+              <progress value="40" max="100">40% de cupos ocupados</progress>
+              <meter value="8.5" min="0" max="10">8.5 de 10</meter>
+            </article>
+
+            <article role="listitem" aria-labelledby="evt2-title">
+              <h3 id="evt2-title">Conferencia: Inteligencia Artificial en la Industria</h3>
+              <p class="meta">Fecha: 2025-11-05 — Hora: 14:00 — Lugar: Sala de conferencias 2</p>
+              <p>Ponentes invitados y panel de discusión sobre adopción de IA en procesos productivos.</p>
+              <progress value="75" max="100">75% de cupos ocupados</progress>
+              <meter value="9" min="0" max="10">9 de 10</meter>
+            </article>
+
+            <article role="listitem" aria-labelledby="evt3-title">
+              <h3 id="evt3-title">Taller de Metodologías Ágiles</h3>
+              <p class="meta">Fecha: 2025-09-28 — Hora: 16:00 — Lugar: Aula Magna</p>
+              <p>Actividad práctica para estudiantes y docentes interesadas en SCRUM y Kanban.</p>
+              <progress value="20" max="100">20% de cupos ocupados</progress>
+              <meter value="7" min="0" max="10">7 de 10</meter>
+            </article>
+
+            <article role="listitem" aria-labelledby="evt4-title">
+              <h3 id="evt4-title">Seminario de Redes y Ciberseguridad</h3>
+              <p class="meta">Fecha: 2025-10-02 — Hora: 10:00 — Lugar: Laboratorio de Redes</p>
+              <p>Temas: análisis de tráfico, prácticas de hardening y casos de estudio.</p>
+              <progress value="55" max="100">55% de cupos ocupados</progress>
+              <meter value="8" min="0" max="10">8 de 10</meter>
+            </article>
+
+            <article role="listitem" aria-labelledby="evt5-title">
+              <h3 id="evt5-title">Jornada de Investigación Estudiantil</h3>
+              <p class="meta">Fecha: 2025-12-01 — Hora: 08:30 — Lugar: Centro de Convenciones</p>
+              <p>Presentación de proyectos finales y pósters de investigación.</p>
+              <progress value="10" max="100">10% de cupos ocupados</progress>
+              <meter value="7.5" min="0" max="10">7.5 de 10</meter>
+            </article>
+
+          </div>
+        </section>
+
+        <section aria-labelledby="depo-title">
+          <h3 id="depo-title">Deportivos</h3>
+          <div class="events-grid">
+            <article>
+              <h3>Campeonato Interfacultades - Fútbol</h3>
+              <p class="meta">Fecha: 2025-11-20 — Hora: 15:00 — Lugar: Canchas Deportivas</p>
+              <p>Competencia entre facultades con premios para los ganadores.</p>
+              <progress value="60" max="100">60% ocupados</progress>
+              <meter value="8" min="0" max="10">8/10</meter>
+            </article>
+
+            <article>
+              <h3>Torneo de Voleibol Intercampus</h3>
+              <p class="meta">Fecha: 2025-10-18 — Hora: 09:00 — Lugar: Canchas Tech</p>
+              <p>Encuentros eliminatorios y jornadas recreativas.</p>
+              <progress value="30" max="100">30% ocupados</progress>
+              <meter value="7" min="0" max="10">7/10</meter>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="cult-title">
+          <h3 id="cult-title">Culturales</h3>
+          <div class="events-grid">
+            <article>
+              <h3>Festival de las Artes UTP</h3>
+              <p class="meta">Fecha: 2025-09-30 — Hora: 18:00 — Lugar: Plaza Central</p>
+              <p>Presentaciones artísticas, música en vivo y exposiciones.</p>
+              <progress value="85" max="100">85% ocupados</progress>
+              <meter value="9" min="0" max="10">9/10</meter>
+            </article>
+
+            <article>
+              <h3>Noche de Poesía y Microteatro</h3>
+              <p class="meta">Fecha: 2025-11-12 — Hora: 19:00 — Lugar: Aula Cultural</p>
+              <p>Lecturas, pequeñas obras y encuentro de creadores.</p>
+              <progress value="50" max="100">50% ocupados</progress>
+              <meter value="7.8" min="0" max="10">7.8/10</meter>
+            </article>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- Formulario de registro -->
+      <section id="registro" aria-labelledby="registro-title">
+        <h2 id="registro-title">Formulario de Registro</h2>
+        <form id="formRegistro" novalidate>
+          <fieldset>
+            <legend>Información Personal</legend>
+
+            <label for="nombre">Nombre completo *</label>
+            <input id="nombre" name="nombre" type="text" required aria-required="true">
+
+            <label for="cedula">Cédula (formato: 12-345-6789) *</label>
+            <input id="cedula" name="cedula" type="text" required pattern="^\d{2}-\d{3,4}-\d{4}$" placeholder="12-345-6789">
+
+            <label for="nacimiento">Fecha de nacimiento *</label>
+            <input id="nacimiento" name="nacimiento" type="date" required max="2007-12-31">
+
+            <div class="row">
+              <div>
+                <label for="email">Correo institucional *</label>
+                <input id="email" name="email" type="email" required placeholder="usuario@utp.ac.pa">
+              </div>
+              <div>
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" pattern="^\+?\d{7,15}$" placeholder="+507XXXXXXXX">
+              </div>
+            </div>
+
+            <label for="facultad">Facultad</label>
+            <input list="facultades" id="facultad" name="facultad">
+            <datalist id="facultades">
+              <option value="Ingeniería de Sistemas">
+              <option value="Ingeniería Civil">
+              <option value="Ingeniería Industrial">
+              <option value="Ciencias Administrativas">
+              <option value="Arquitectura y Diseño">
+            </datalist>
+
+            <label for="color">Color favorito</label>
+            <input id="color" name="color" type="color" value="#005b96">
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Selección de Evento</legend>
+
+            <label for="eventoSel">Evento *</label>
+            <select id="eventoSel" name="eventoSel" required>
+              <option value="">-- Selecciona un evento --</option>
+              <option>Feria Tecnológica UTP 2025</option>
+              <option>Conferencia: Inteligencia Artificial en la Industria</option>
+              <option>Taller de Metodologías Ágiles</option>
+              <option>Seminario de Redes y Ciberseguridad</option>
+              <option>Jornada de Investigación Estudiantil</option>
+            </select>
+
+            <label for="horaPref">Hora preferida</label>
+            <input id="horaPref" name="horaPref" type="time">
+
+            <label for="acompanantes">Cantidad de acompañantes</label>
+            <input id="acompanantes" name="acompanantes" type="number" min="0" max="10" value="0">
+
+            <label for="interes">Nivel de interés</label>
+            <input id="interes" name="interes" type="range" min="1" max="10" value="5">
+
+          </fieldset>
+
+          <p><small>* Campos obligatorios</small></p>
+          <button type="submit">Validar Registro</button>
+        </form>
+
+        <!-- Mensaje de ayuda y FAQ -->
+        <details>
+          <summary>¿Cómo me registro para un evento?</summary>
+          <p>Completa el formulario de registro rellenando los campos obligatorios y presiona "Validar Registro". El formulario utiliza validación HTML5.</p>
+        </details>
+
+      </section>
+
+      <!-- Fotos pasadas -->
+      <section aria-labelledby="fotos-title">
+        <h2 id="fotos-title">Fotos de eventos pasados</h2>
+        <figure>
+          <img src="assets/evento-foto.jpg" alt="Diplomado en Habilidades Administrativas promoción 2025" style="width:100%;border-radius:8px;">
+          <figcaption>Diplomado en Habilidades Administrativas promoción (2025).</figcaption>
+        </figure>
+      </section>
+
+    </div>
+
+    <aside>
+      <h3>Eventos destacados</h3>
+      <ul>
+        <li><strong>Feria Tecnológica</strong> — 15 Oct 2025</li>
+        <li><strong>Festival de las Artes</strong> — 30 Sep 2025</li>
+        <li><strong>Conferencia IA</strong> — 05 Nov 2025</li>
+      </ul>
+
+      <h4>Contacto rápido</h4>
+      <p id="contacto">email: eventos@utp.ac.pa<br>Tel: +507 0000-0000</p>
+
+      <h4>Preguntas frecuentes</h4>
+      <details>
+        <summary>¿Puedo llevar acompañantes?</summary>
+        <p>Depende del evento; revisa la sección de inscripción para cada actividad.</p>
+      </details>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Universidad Tecnológica de Panamá — Portal de Eventos · <a href="#" style="color:inherit">Política de privacidad</a></p>
+    <p>Síguenos: <a href="#" style="color:inherit">Facebook</a> · <a href="#" style="color:inherit">Instagram</a> · <a href="#" style="color:inherit">Twitter</a></p>
+  </footer>
+
+  <script>
+    // Validación simple al enviar: mostramos mensajes de validación nativos
+    (function(){
+      const form = document.getElementById('formRegistro');
+      if(!form){
+        console.warn('Formulario con id "formRegistro" no encontrado. La validación por JS ha sido omitida para evitar errores.');
+        return;
+      }
+
+      form.addEventListener('submit', function(e){
+        if(!this.checkValidity()){
+          e.preventDefault();
+          this.reportValidity();
+        } else {
+          e.preventDefault();
+          alert('Formulario válido (no se guardará). Preparado para captura de pantalla.');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
