@@ -1,0 +1,59 @@
+/* Fondo del body */
+body {
+  background-color: lightgray;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Selectores básicos */
+h1, h2 {
+  color: #1e3a8a; /* Azul */
+}
+
+p {
+  color: #555;        /* Gris */
+  font-size: 16px;
+}
+
+/* Clases e IDs */
+.subtitulo {
+  font-style: italic;
+  color: green;
+}
+
+#intro {
+  background-color: #fff9c4; /* Amarillo claro */
+  padding: 15px;
+}
+
+/* Modelo de caja */
+.tarjeta {
+  border: 2px solid gray;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+/* Botón interactivo */
+button {
+  background-color: #1e40af; /* Azul */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e3a8a; /* Azul más oscuro */
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
