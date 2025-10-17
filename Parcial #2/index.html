@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banderas de países</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Banderas de países</h1>
+
+    <!-- Bandera principal -->
+    <div class="principal">
+      <img src="https://flagcdn.com/w320/gt.png" alt="Guatemala">
+      <p>Guatemala</p>
+    </div>
+
+    <!-- Banderas secundarias -->
+    <div class="secundarias">
+      <div class="pais">
+        <img src="https://flagcdn.com/w160/cr.png" alt="Costa Rica">
+        <p>Costa Rica</p>
+      </div>
+      <div class="pais">
+        <img src="https://flagcdn.com/w160/pa.png" alt="Panamá">
+        <p>Panamá</p>
+      </div>
+      <div class="pais">
+        <img src="https://flagcdn.com/w160/hn.png" alt="Honduras">
+        <p>Honduras</p>
+      </div>
+    </div>
+  </div>
+<script>
+  const datos = {
+    "Guatemala": "Capital: Ciudad de Guatemala",
+    "Costa Rica": "Capital: San José",
+    "Panamá": "Capital: Ciudad de Panamá",
+    "Honduras": "Capital: Tegucigalpa"
+  };
+
+  const paises = document.querySelectorAll('.pais, .principal');
+
+  paises.forEach(pais => {
+    pais.addEventListener('mouseenter', () => {
+      const nombre = pais.querySelector('p').textContent;
+      pais.title = datos[nombre];
+    });
+  });
+</script>
+</body>
+</html>
